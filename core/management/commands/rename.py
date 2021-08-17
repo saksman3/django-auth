@@ -10,12 +10,12 @@ class Command(BaseCommand):
     def handle(self, *args,**kwargs):
         project_name = kwargs['project_name']
 
-        files_to_rename = ['demo.settings.base.py','demo.wsgi.py', 'manage.py']
+        files_to_rename = ['demo/settings/base.py','demo/wsgi.py', 'manage.py']
         folders_to_rename = 'demo'
         for f in files_to_rename:
             with open(f,'r') as file:
                 filedata = file.read()
-            filedata.replace('demo',project_name)
+            filedata = filedata.replace('demo',project_name)
             with open(f,'w') as file:
                 file.write(filedata)
         os.rename(folders_to_rename,project_name)
