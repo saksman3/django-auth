@@ -13,6 +13,6 @@ VOLUME /home/ssibuyi/auth_app/
 
 RUN chmod u+x /home/ssibuyi/auth_app/bin/gunicorn_start.sh
 
-ENTRYPOINT [ "/home/ssibuyi/auth_app/bin/gunicorn_start" ]
+ENTRYPOINT [ "/home/ssibuyi/auth_app/bin/gunicorn_start.sh" ]
 
 
