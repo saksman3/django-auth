@@ -6,7 +6,7 @@ DJANGODIR=/home/ssibuyi/auth_app/auth
 # we will communicte using this unix socket
 SOCKFILE=/home/ssibuyi/auth_app/auth/run/gunicorn.sock
 # the user to run as
-USER=ssibuyi
+USER=ubuntu
 # the group to run as
 GROUP=ubuntu
 # how many worker processes should Gunicorn spawn
